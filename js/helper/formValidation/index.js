@@ -1,4 +1,4 @@
-import { $ } from './querySelectorAlias'
+import { $ } from '../querySelectorAlias'
 
 /**
  * Client Side form validation to allow submitting Form only if all required fields and the DSGVO Checkbox are filled
@@ -9,7 +9,7 @@ import { $ } from './querySelectorAlias'
  * @param {NodeSelector} [dsgvo=document.querySelector('#form_DSGVO')] - Selector for DSGVO Checkbox
  */
 
-const formValidation = (
+const index = (
     form = $('form'),
     required = $('[required]'),
     button = $('form button[type="submit"]'),
@@ -34,4 +34,4 @@ const formValidation = (
     }
 }
 
-export { formValidation }
+export { index }
