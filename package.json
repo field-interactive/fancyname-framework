@@ -1,9 +1,12 @@
 {
-  "name": "fancyname-framework",
-  "version": "0.0.1",
-  "description": "Standardized Elements from Field",
-  "main": "index.js",
-  "repository": "git@github.com:field-interactive/fancyname-framework.git",
-  "author": "dominikdeimel <d.deimel@field-interactive.com>",
-  "license": "MIT"
+    "name": "fancyname-framework",
+    "version": "0.0.1",
+    "description": "Standardized Elements from Field",
+    "main": "index.js",
+    "repository": "git@github.com:field-interactive/fancyname-framework.git",
+    "author": "dominikdeimel <d.deimel@field-interactive.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "standard": "^12.0.1"
+    }
 }
