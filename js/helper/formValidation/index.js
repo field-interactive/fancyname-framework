@@ -9,7 +9,7 @@ import { $ } from '../querySelectorAlias'
  * @param {NodeSelector} [dsgvo=document.querySelector('#form_DSGVO')] - Selector for DSGVO Checkbox
  */
 
-const index = (
+const formValidation = (
     form = $('form'),
     required = $('[required]'),
     button = $('form button[type="submit"]'),
@@ -34,4 +34,4 @@ const index = (
     }
 }
 
-export { index }
+export { formValidation }
