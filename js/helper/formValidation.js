@@ -1,6 +1,7 @@
 import { $ } from './querySelectorAlias'
 
 /**
+ * Client Side form validation to allow submitting Form only if all required fields and the DSGVO Checkbox are filled
  *
  * @param {NodeSelector} [form=document.querySelector('form')] - Selector for the Form
  * @param {NodeSelector} [required=document.querySelectorAll('[required]')] - Selector for all fields with the required attribute
