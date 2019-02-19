@@ -1,7 +1,7 @@
-import { agree, notice } from '../../variables'
+import { agree, notice } from '../variables'
 import Cookies from 'js-cookie'
 
-const cookies = () => {
+const cookieNotice = () => {
     if (notice !== null) {
         if (Cookies.get('cookieNotice')) {
             notice.parentNode.removeChild(notice)
@@ -17,4 +17,4 @@ const cookies = () => {
     })
 }
 
-export { cookies }
+export { cookieNotice }
