@@ -1,12 +1,10 @@
-import { $ } from '../querySelectorAlias'
-
 /**
  *
  * @param {NodeSelector} [navLinkSelector=document.querySelectorAll('nav ul li a')] - Selector for Links in Navigation for the Waypoints
  * @param {NodeSelector} [sectionSelector=document.querySelectorAll('section')] - Selector for the Waypoints to Check against the nav
  */
 
-const navWaypoints = (navLinkSelector = $('nav ul li a'), sectionSelector = $('section')) => {
+const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a'), sectionSelector = document.querySelectorAll('section')) => {
     ['scroll', 'load'].forEach(event => {
         window.addEventListener(event, () => {
             if (!('IntersectionObserver' in window) ||

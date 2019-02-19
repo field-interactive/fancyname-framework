@@ -1,5 +1,4 @@
 import { easings } from './easings'
-import { $ } from '../querySelectorAlias'
 
 /**
  * Snoothscroll to an Element or Section
@@ -9,7 +8,7 @@ import { $ } from '../querySelectorAlias'
  * @param {Function} [callback] - Callback when scroll is completed
  */
 const smoothScroll = (destination, duration, easing = 'linear', callback) => {
-    let dest = typeof destination === 'number' ? destination : $(destination)
+    let dest = typeof destination === 'number' ? destination : document.querySelector(destination)
     const start = window.pageYOffset
     const startTime = 'now' in window.performance ? performance.now() : new Date().getTime()
 
