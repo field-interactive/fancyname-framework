@@ -2,7 +2,7 @@ import { agree, notice } from '../variables'
 import Cookies from 'js-cookie'
 
 const cookieNotice = () => {
-    if (notice !== null) {
+    if (notice) {
         if (Cookies.get('cookieNotice')) {
             notice.parentNode.removeChild(notice)
         } else {
