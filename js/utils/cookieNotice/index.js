@@ -1,9 +1,9 @@
 import { agree, notice } from '../variables'
-import Cookies from 'js-cookie'
+import { getCookie, setCookie } from './cookieHelper'
 
 const cookieNotice = () => {
     if (notice) {
-        if (Cookies.get('cookieNotice')) {
+        if (getCookie('cookieNotice')) {
             notice.parentNode.removeChild(notice)
         } else {
             notice.classList.add('show')
@@ -13,7 +13,7 @@ const cookieNotice = () => {
     agree.addEventListener('click', e => {
         e.preventDefault()
         notice.parentNode.removeChild(notice)
-        Cookies.set('cookieNotice', 'accepted', { expires: 365 })
+        setCookie('cookieNotice', 'accepted', 365)
     })
 }
 
