@@ -1,0 +1,58 @@
+*
+    margin: 0
+    padding: 0
+    position: relative
+    box-sizing: border-box
+
+html
+    font-family: sans-serif
+    font-size: 20px
+    line-height: 133%
+    color: #000
+
+nav
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    background: #fff
+    box-shadow: 0 0 7px rgba(0, 0, 0, .75)
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 24px
+    z-index: 999
+
+    ul
+        display: flex
+        align-items: center
+        justify-content: center
+        list-style: none
+
+        li
+            a
+                display: block
+                padding: 0 16px
+                text-decoration: none
+                color: #000
+
+                &.active
+                    text-decoration: underline
+
+section
+    height: 100vh
+    width: 100vw
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 100px
+
+    &:first-of-type
+        background: rebeccapurple
+        color: #fff
+
+    &:nth-of-type(2)
+        background: antiquewhite
+
+    &:last-of-type
+        background: aquamarine
