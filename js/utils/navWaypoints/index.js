@@ -1,4 +1,5 @@
 import { $ } from '../querySelectorAlias'
+import IntersectionObserverPolyfill from './polyfill'
 
 /**
  *
@@ -7,16 +8,9 @@ import { $ } from '../querySelectorAlias'
  */
 
 const navWaypoints = (navLinkSelector = $('nav ul li a'), sectionSelector = $('section')) => {
-
-    // TODO make Polyfills work
-
-    if (!'IntersectionObserver' in window) {
-        import('./polyfill').then((module) => {
-            module()
-        })
-    }
     ['scroll', 'load'].forEach(event => {
         window.addEventListener(event, () => {
+            IntersectionObserverPolyfill()
             const config = {
                 rootMargin: '0px'
             }
@@ -25,7 +19,6 @@ const navWaypoints = (navLinkSelector = $('nav ul li a'), sectionSelector = $('s
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0.9) {
                         functionNav(entry)
-                        io.unobserve(entry)
                     }
                 })
             }, config)
