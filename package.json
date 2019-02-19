@@ -6,7 +6,13 @@
     "repository": "git@github.com:field-interactive/fancyname-framework.git",
     "author": "dominikdeimel <d.deimel@field-interactive.com>",
     "license": "MIT",
+    "scripts": {
+        "dev": "parcel ./testing/index.html",
+        "build": "parcel build ./testing/index.html"
+    },
     "devDependencies": {
+        "parcel-bundler": "^1.11.0",
+        "sass": "^1.17.0",
         "standard": "^12.0.1"
     },
     "dependencies": {
