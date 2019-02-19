@@ -1,2 +1,2 @@
-# fancyname-framework
+# Fancyname Framework
 Standardized Elements from Field
