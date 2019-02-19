@@ -1,0 +1,54 @@
+*
+    margin: 0
+    padding: 0
+    position: relative
+    box-sizing: border-box
+
+html
+    font-family: sans-serif
+    font-size: 10px
+    line-height: 150%
+    color: #000
+    background: #f2f2f2
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .tabs
+        width: 100%
+        margin: 0 auto
+        max-width: 48rem
+
+        .tabNav
+            display: flex
+            flex-direction: row
+            list-style: none
+
+            li
+                flex: 1
+                background: #85959d
+                color: #fff
+                text-align: center
+                text-transform: uppercase
+                font-size: 2rem
+                padding: 1.35rem 1rem 1.15rem
+                cursor: pointer
+
+                &.active
+                    background: #fff
+                    color: #00469b
+
+        .tabContainer
+            background: #85959d
+
+            .tab
+                display: none
+                padding: 2.4rem
+                font-size: 2rem
+                line-height: 150%
+
+                &.active
+                    display: block
+                    background: #fff
+

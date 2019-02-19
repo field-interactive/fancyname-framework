@@ -9,7 +9,8 @@
     "scripts": {
         "dev-smoothscroll": "parcel ./examples/smoothScrolling/index.html",
         "dev-cookie": "parcel ./examples/cookieNotice/index.html",
-        "dev-navwaypoints": "parcel ./examples/navWaypoints/index.html"
+        "dev-navwaypoints": "parcel ./examples/navWaypoints/index.html",
+        "dev-tabcontainer": "parcel ./examples/tabContainer/index.html"
     },
     "devDependencies": {
         "parcel-bundler": "^1.11.0",
