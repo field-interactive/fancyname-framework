@@ -1,5 +1,5 @@
-import {$} from '../../build/js/querySelectorAlias'
-import {smoothScroll} from '../../build/js/smoothscroll'
+import { $ } from '../../build/js/querySelectorAlias'
+import { smoothScroll } from '../../build/js/smoothscroll'
 
 $('nav ul li a').forEach(item => {
     item.addEventListener('click', e => {
