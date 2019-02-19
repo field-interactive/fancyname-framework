@@ -2,7 +2,7 @@ import { easings } from './easings'
 
 /**
  * Snoothscroll to an Element or Section
- * @param {NodeSelector | Number} destination - Element / Height of Scroll
+ * @param {String | Number} destination - Element / Height of Scroll
  * @param {Number} duration - Duration of scrolling
  * @param {String} [easing=linear] - Type of scrollanimation
  * @param {Function} [callback] - Callback when scroll is completed

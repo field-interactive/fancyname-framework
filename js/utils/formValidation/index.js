@@ -3,8 +3,8 @@
  *
  * @param {Node} [form=document.querySelector('form')] - Selector for the Form
  * @param {NodeListOf} [required=document.querySelectorAll('[required]')] - Selector for all fields with the required attribute
- * @param {NodeSelector} [button=document.querySelector('form button[type="submit"]')] - Selector for submit button
- * @param {NodeSelector} [dsgvo=document.querySelector('#form_DSGVO')] - Selector for DSGVO Checkbox
+ * @param {Element} [button=document.querySelector('form button[type="submit"]')] - Selector for submit button
+ * @param {HTMLInputElement} [dsgvo=document.querySelector('#form_DSGVO')] - Selector for DSGVO Checkbox
  */
 
 const formValidation = (

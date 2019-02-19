@@ -1,6 +1,6 @@
 /**
  * jQuery like Syntax for document.querySelector() or document.querySelectorAll()
- * @param {NodeSelector} domNodes
+ * @param {String} domNodes
  * @return {Node | Array}
  */
 

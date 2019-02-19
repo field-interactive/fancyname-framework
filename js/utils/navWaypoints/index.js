@@ -1,7 +1,7 @@
 /**
  *
- * @param {NodeSelector} [navLinkSelector=document.querySelectorAll('nav ul li a')] - Selector for Links in Navigation for the Waypoints
- * @param {NodeSelector} [sectionSelector=document.querySelectorAll('section')] - Selector for the Waypoints to Check against the nav
+ * @param {NodeListOf} [navLinkSelector=document.querySelectorAll('nav ul li a')] - Selector for Links in Navigation for the Waypoints
+ * @param {NodeListOf} [sectionSelector=document.querySelectorAll('section')] - Selector for the Waypoints to Check against the nav
  */
 
 const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a'), sectionSelector = document.querySelectorAll('section')) => {
