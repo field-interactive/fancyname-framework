@@ -10,7 +10,13 @@
         "dev-smoothscroll": "parcel ./examples/smoothScrolling/index.html",
         "dev-cookie": "parcel ./examples/cookieNotice/index.html",
         "dev-navwaypoints": "parcel ./examples/navWaypoints/index.html",
-        "dev-tabcontainer": "parcel ./examples/tabContainer/index.html"
+        "dev-tabcontainer": "parcel ./examples/tabContainer/index.html",
+        "build-alias": "parcel build ./js/utils/querySelectorAlias/index.js -d build/js/querySelectorAlias --no-source-maps",
+        "build-smoothscroll": "parcel build ./js/utils/smoothScroll/index.js -d build/js/smoothscroll --no-source-maps",
+        "build-cookie": "parcel build ./js/utils/cookieNotice/index.js -d build/js/cookieNotice --no-source-maps",
+        "build-navwaypoints": "parcel build ./js/utils/navWaypoints/index.js -d build/js/navWaypoints --no-source-maps",
+        "build-tabcontainer": "parcel build ./js/utils/tabContainer/index.js -d build/js/tabContainer --no-source-maps",
+        "build": "yarn run build-alias && yarn run build-smoothscroll && yarn run build-cookie && yarn run build-navwaypoints && yarn run build-tabcontainer"
     },
     "devDependencies": {
         "parcel-bundler": "^1.11.0",

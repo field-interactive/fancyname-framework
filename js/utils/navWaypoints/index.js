@@ -1,5 +1,4 @@
 import { $ } from '../querySelectorAlias'
-import IntersectionObserverPolyfill from './polyfill'
 
 /**
  *
@@ -10,7 +9,12 @@ import IntersectionObserverPolyfill from './polyfill'
 const navWaypoints = (navLinkSelector = $('nav ul li a'), sectionSelector = $('section')) => {
     ['scroll', 'load'].forEach(event => {
         window.addEventListener(event, () => {
-            IntersectionObserverPolyfill()
+            if (!('IntersectionObserver' in window) ||
+                !('IntersectionObserverEntry' in window) ||
+                !('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
+                import('./polyfill').then((IntersectionObserverPolyfill) => IntersectionObserverPolyfill.default() )
+            }
+
             const config = {
                 rootMargin: '0px'
             }
