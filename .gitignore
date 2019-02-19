@@ -6,6 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 .idea
 .vs-code
+dist
+.cache
 
 # Runtime data
 pids
@@ -67,7 +69,6 @@ Würde .idea/misc.xml löschen
 Würde .idea/modules.xml löschen
 Würde .idea/workspace.xml löschen
 Würde package.json löschen
-/.idea/vcs.xml
 Würde js/ löschen
 Würde sass/ löschen
 Würde yarn.lock löschen

@@ -7,8 +7,7 @@
     "author": "dominikdeimel <d.deimel@field-interactive.com>",
     "license": "MIT",
     "scripts": {
-        "dev": "parcel ./testing/index.html",
-        "build": "parcel build ./testing/index.html"
+        "dev-smoothscroll": "parcel ./examples/smoothScrolling/index.html"
     },
     "devDependencies": {
         "parcel-bundler": "^1.11.0",
