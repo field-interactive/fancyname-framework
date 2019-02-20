@@ -165,7 +165,7 @@ export default function IntersectionObserverPolyfill () {
                 this._unmonitorIntersections()
                 this._unregisterInstance()
             }
-        };
+        }
 
         /**
          * Stops observing all target elements for intersection changes.
@@ -228,7 +228,7 @@ export default function IntersectionObserverPolyfill () {
                     throw new Error('rootMargin must be specified in pixels or percent')
                 }
                 return { value: parseFloat(parts[1]), unit: parts[2] }
-            });
+            })
 
             // Handles shorthand.
             margins[1] = margins[1] || margins[0]
@@ -236,7 +236,7 @@ export default function IntersectionObserverPolyfill () {
             margins[3] = margins[3] || margins[1]
 
             return margins
-        };
+        }
 
         /**
          * Starts polling for intersection changes if the polling is not already
@@ -395,7 +395,7 @@ export default function IntersectionObserverPolyfill () {
                     parent = getParentNode(parent)
                 }
                 return intersectionRect
-            };
+            }
 
         /**
          * Returns the root rect after being expanded by the rootMargin value.
@@ -695,5 +695,5 @@ export default function IntersectionObserverPolyfill () {
         window.IntersectionObserver = IntersectionObserver
         window.IntersectionObserverEntry = IntersectionObserverEntry
 
-    }(window, document));
+    }(window, document))
 };

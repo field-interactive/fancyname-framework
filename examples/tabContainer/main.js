@@ -1,3 +1,3 @@
-import { tabs } from '../../js/utils/tabContainer'
+import { tabs } from '../../ts/utils/tabContainer'
 
 tabs()

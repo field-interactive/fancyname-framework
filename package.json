@@ -11,18 +11,19 @@
         "dev-cookie": "parcel ./examples/cookieNotice/index.html",
         "dev-navwaypoints": "parcel ./examples/navWaypoints/index.html",
         "dev-tabcontainer": "parcel ./examples/tabContainer/index.html",
-        "build-alias": "parcel build ./js/utils/querySelectorAlias/index.js -d build/js/querySelectorAlias --no-source-maps",
-        "build-smoothscroll": "parcel build ./js/utils/smoothScroll/index.js -d build/js/smoothscroll --no-source-maps",
-        "build-cookie": "parcel build ./js/utils/cookieNotice/index.js -d build/js/cookieNotice --no-source-maps",
-        "build-navwaypoints": "parcel build ./js/utils/navWaypoints/index.js -d build/js/navWaypoints --no-source-maps",
-        "build-tabcontainer": "parcel build ./js/utils/tabContainer/index.js -d build/js/tabContainer --no-source-maps",
+        "build-alias": "parcel build ./ts/utils/querySelectorAlias/index.ts -d build/js/querySelectorAlias --no-source-maps",
+        "build-smoothscroll": "parcel build ./ts/utils/smoothScroll/index.ts -d build/js/smoothscroll --no-source-maps",
+        "build-cookie": "parcel build ./ts/utils/cookieNotice/index.ts -d build/js/cookieNotice --no-source-maps",
+        "build-navwaypoints": "parcel build ./ts/utils/navWaypoints/index.ts -d build/js/navWaypoints --no-source-maps",
+        "build-tabcontainer": "parcel build ./ts/utils/tabContainer/index.ts -d build/js/tabContainer --no-source-maps",
         "build": "yarn run build-alias && yarn run build-smoothscroll && yarn run build-cookie && yarn run build-navwaypoints && yarn run build-tabcontainer"
     },
     "devDependencies": {
         "@babel/core": "^7.3.3",
         "parcel-bundler": "^1.11.0",
         "sass": "^1.17.0",
-        "standard": "^12.0.1"
+        "standard": "^12.0.1",
+        "typescript": "^3.3.3"
     },
     "dependencies": {
         "@babel/plugin-syntax-dynamic-import": "^7.2.0",

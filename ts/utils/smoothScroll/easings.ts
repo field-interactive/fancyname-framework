@@ -1,47 +1,47 @@
 const easings = {
-    linear (t) {
+    linear(t) {
         return t
     },
-    easeInQuad (t) {
+    easeInQuad(t) {
         return t * t
     },
-    easeOutQuad (t) {
+    easeOutQuad(t) {
         return t * (2 - t)
     },
-    easeInOutQuad (t) {
+    easeInOutQuad(t) {
         return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t
     },
-    easeInCubic (t) {
+    easeInCubic(t) {
         return t * t * t
     },
-    easeOutCubic (t) {
+    easeOutCubic(t) {
         return --t * t * t + 1
     },
-    easeInOutCubic (t) {
+    easeInOutCubic(t) {
         return t < 0.5
             ? 4 * t * t * t
             : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1
     },
-    easeInQuart (t) {
+    easeInQuart(t) {
         return t * t * t * t
     },
-    easeOutQuart (t) {
+    easeOutQuart(t) {
         return 1 - --t * t * t * t
     },
-    easeInOutQuart (t) {
+    easeInOutQuart(t) {
         return t < 0.5 ? 8 * t * t * t * t : 1 - 8 * --t * t * t * t
     },
-    easeInQuint (t) {
+    easeInQuint(t) {
         return t * t * t * t * t
     },
-    easeOutQuint (t) {
+    easeOutQuint(t) {
         return 1 + --t * t * t * t * t
     },
-    easeInOutQuint (t) {
+    easeInOutQuint(t) {
         return t < 0.5
             ? 16 * t * t * t * t * t
             : 1 + 16 * --t * t * t * t * t
     }
-}
+};
 
-export { easings }
+export {easings}

@@ -10,12 +10,12 @@ const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a')
             if (!('IntersectionObserver' in window) ||
                 !('IntersectionObserverEntry' in window) ||
                 !('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
-                import('./polyfill').then((IntersectionObserverPolyfill) => IntersectionObserverPolyfill.default() )
+                import('./polyfill').then((IntersectionObserverPolyfill) => IntersectionObserverPolyfill.default())
             }
 
             const config = {
                 rootMargin: '0px'
-            }
+            };
 
             let io = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
@@ -23,15 +23,15 @@ const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a')
                         functionNav(entry)
                     }
                 })
-            }, config)
+            }, config);
 
             sectionSelector.forEach(section => {
                 io.observe(section)
-            })
+            });
 
             const functionNav = entry => {
                 navLinkSelector.forEach(navPoint => {
-                    navPoint.classList.remove('active')
+                    navPoint.classList.remove('active');
                     if (`#${entry.target.id}` === navPoint.hash) {
                         navPoint.classList.add('active')
                     }
@@ -40,6 +40,6 @@ const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a')
         })
     })
 
-}
+};
 
-export { navWaypoints }
+export {navWaypoints}

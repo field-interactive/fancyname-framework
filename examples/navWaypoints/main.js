@@ -1,3 +1,3 @@
-import { navWaypoints } from '../../js/utils/navWaypoints'
+import { navWaypoints } from '../../ts/utils/navWaypoints'
 
 navWaypoints()

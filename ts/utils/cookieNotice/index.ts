@@ -1,7 +1,7 @@
-import { agree, notice } from '../variables'
-import { getCookie, setCookie } from './cookieHelper'
+import {agree, notice} from '../variables'
+import {getCookie, setCookie} from './cookieHelper'
 
-const cookieNotice = () => {
+const cookieNotice = (): void => {
     if (notice) {
         if (getCookie('cookieNotice')) {
             notice.parentNode.removeChild(notice)
@@ -11,10 +11,10 @@ const cookieNotice = () => {
     }
 
     agree.addEventListener('click', e => {
-        e.preventDefault()
-        notice.parentNode.removeChild(notice)
+        e.preventDefault();
+        notice.parentNode.removeChild(notice);
         setCookie('cookieNotice', 'accepted', 365)
     })
-}
+};
 
-export { cookieNotice }
+export {cookieNotice}

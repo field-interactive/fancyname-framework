@@ -1,20 +1,19 @@
 /**
  * Client Side form validation to allow submitting Form only if all required fields and the DSGVO Checkbox are filled
- *
- * @param {Node} [form=document.querySelector('form')] - Selector for the Form
- * @param {NodeListOf} [required=document.querySelectorAll('[required]')] - Selector for all fields with the required attribute
- * @param {Element} [button=document.querySelector('form button[type="submit"]')] - Selector for submit button
- * @param {HTMLInputElement} [dsgvo=document.querySelector('#form_DSGVO')] - Selector for DSGVO Checkbox
+ * @param form
+ * @param required
+ * @param button
+ * @param dsgvo
  */
 
 const formValidation = (
-    form = document.querySelector('form'),
-    required = document.querySelectorAll('[required]'),
-    button = document.querySelector('form button[type="submit"]'),
-    dsgvo = document.querySelector('#form_DSGVO')
-) => {
+    form: HTMLELement = document.querySelector('form'),
+    required: NodeList = document.querySelectorAll('[required]'),
+    button: HTMLELement = document.querySelector('form button[type="submit"]'),
+    dsgvo: HTMLELement = document.querySelector('#form_DSGVO')
+): void => {
     if (form) {
-        form.addEventListener('click', () => {
+        form.addEventListener('click', (): void => {
             if (validateForm() && dsgvo.checked) {
                 button.removeAttribute('disabled')
             } else {
@@ -23,13 +22,13 @@ const formValidation = (
         })
     }
 
-    const validateForm = () => {
-        let isValid = true
-        required.forEach(i => {
+    const validateForm = (): boolean => {
+        let isValid: boolean = true;
+        required.forEach((i: HTMLELement): void => {
             if (i.value === '') isValid = false
-        })
+        });
         return isValid
     }
-}
+};
 
-export { formValidation }
+export {formValidation}

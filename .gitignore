@@ -61,7 +61,7 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
+# next.ts build output
 .next
 Würde .idea/encodings.xml löschen
 Würde .idea/fancyname-framework.iml löschen

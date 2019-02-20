@@ -1,3 +1,3 @@
-import { cookieNotice } from '../../js/utils/cookieNotice'
+import { cookieNotice } from '../../ts/utils/cookieNotice'
 
 cookieNotice()

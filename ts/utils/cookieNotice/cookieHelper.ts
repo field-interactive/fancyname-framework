@@ -5,11 +5,11 @@
  * @param {Number} days
  */
 
-const setCookie = (name, value, days) => {
-    const d = new Date
-    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days)
+const setCookie = (name: string, value: string, days: number): void => {
+    const d = new Date;
+    d.setTime(d.getTime() + 24 * 60 * 60 * 1000 * days);
     document.cookie = `${name}=${value};path=/;expires=${d.toUTCString()}`
-}
+};
 
 /**
  *
@@ -17,16 +17,16 @@ const setCookie = (name, value, days) => {
  * @return {any}
  */
 
-const getCookie = name => {
-    const v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)')
+const getCookie = (name: string): any => {
+    const v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
     return v ? v[2] : null
-}
+};
 
 /**
  *
  * @param {String} name
  */
 
-const deleteCookie = name => setCookie(name, '', -1)
+const deleteCookie = (name: string) => setCookie(name, '', -1);
 
-export { setCookie, getCookie, deleteCookie }
+export {setCookie, getCookie, deleteCookie}
