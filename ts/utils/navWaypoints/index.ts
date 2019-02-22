@@ -1,23 +1,27 @@
 /**
  *
- * @param {NodeListOf} [navLinkSelector=document.querySelectorAll('nav ul li a')] - Selector for Links in Navigation for the Waypoints
- * @param {NodeListOf} [sectionSelector=document.querySelectorAll('section')] - Selector for the Waypoints to Check against the nav
+ * @param {NodeList} [navLinkSelector=document.querySelectorAll('nav ul li a')] - Selector for Links in Navigation for the Waypoints
+ * @param {NodeList} [sectionSelector=document.querySelectorAll('section')] - Selector for the Waypoints to Check against the nav
  */
 
-const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a'), sectionSelector = document.querySelectorAll('section')) => {
-    ['scroll', 'load'].forEach(event => {
-        window.addEventListener(event, () => {
+interface Waypoints {
+    (navLinkSelector?: NodeList, sectionSelector?: NodeList): void
+}
+
+const navWaypoints: Waypoints = (navLinkSelector = document.querySelectorAll('nav ul li a'), sectionSelector = document.querySelectorAll('section')) => {
+    ['scroll', 'load'].forEach((event: any): void => {
+        window.addEventListener(event, (): void => {
             if (!('IntersectionObserver' in window) ||
                 !('IntersectionObserverEntry' in window) ||
                 !('intersectionRatio' in window.IntersectionObserverEntry.prototype)) {
                 import('./polyfill').then((IntersectionObserverPolyfill) => IntersectionObserverPolyfill.default())
             }
 
-            const config = {
+            const config: object = {
                 rootMargin: '0px'
             };
 
-            let io = new IntersectionObserver(entries => {
+            let io: any = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     if (entry.intersectionRatio > 0.9) {
                         functionNav(entry)
@@ -30,7 +34,7 @@ const navWaypoints = (navLinkSelector = document.querySelectorAll('nav ul li a')
             });
 
             const functionNav = entry => {
-                navLinkSelector.forEach(navPoint => {
+                navLinkSelector.forEach((navPoint: HTMLAnchorElement) => {
                     navPoint.classList.remove('active');
                     if (`#${entry.target.id}` === navPoint.hash) {
                         navPoint.classList.add('active')
