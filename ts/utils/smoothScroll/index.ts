@@ -7,7 +7,7 @@ import {easings} from './easings'
  * @param {String} [easing=linear] - Type of scrollanimation
  * @param {Function} [callback] - Callback when scroll is completed
  */
-const smoothScroll = (destination, duration, easing = 'linear', callback) => {
+const smoothScroll = (destination: any, duration: number, easing = 'linear', callback: { (): void; (): void; }) => {
     let dest = typeof destination === 'number' ? destination : document.querySelector(destination);
     const start = window.pageYOffset;
     const startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
