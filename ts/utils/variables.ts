@@ -1,10 +1,8 @@
-import {$} from './querySelectorAlias'
+const notice = document.querySelector('#notice')
+const agree = document.querySelector('.agree')
 
-const notice = $('#notice');
-const agree = $('.agree');
-
-const tab = $('.tabs');
-const tabNav = $('.tabNav');
-const tabContainer = $('.tabContainer');
+const tab = document.querySelector('.tabs')
+const tabNav = document.querySelector('.tabNav')
+const tabContainer = document.querySelector('.tabContainer')
 
 export {notice, agree, tab, tabNav, tabContainer}

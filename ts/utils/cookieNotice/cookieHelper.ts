@@ -27,6 +27,6 @@ const getCookie = (name: string): any => {
  * @param {String} name
  */
 
-const deleteCookie = (name: string) => setCookie(name, '', -1);
+const deleteCookie = (name: string): void => setCookie(name, '', -1);
 
 export {setCookie, getCookie, deleteCookie}
